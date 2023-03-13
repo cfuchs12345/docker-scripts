@@ -1,0 +1,11 @@
+docker volume create yacht
+docker run -d \
+--name yacht \
+--restart unless-stopped \
+--network=traefik-v2_default \
+-l traefik.docker.network=traefik-v2_default \
+-l traefik.enable=true \
+-l traefik.http.routers.yacht.entrypoints=web \
+-l traefik.http.routers.yacht.rule=Host\(\`an.example\`\) \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v yacht:/config selfhostedpro/yacht

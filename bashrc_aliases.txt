@@ -1,0 +1,5 @@
+# I added these entries in the .bashrc as alias command for my scripts
+
+alias docker-compose='docker compose'
+alias docker_up='/home/cfuchs/docker_up.sh'
+alias docker_down='/home/cfuchs/docker_down.sh'
